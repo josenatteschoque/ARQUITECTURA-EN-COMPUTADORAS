@@ -1,0 +1,12 @@
+ADD Sumar al Acc Mp[AP] | Acc ← Acc + Mp[AP]
+
+    "microinstrucciones"
+
+8   MAR <-- AP //Carga el argumento al registro MAR 
+12  RAED <-- (MDR <-- MP[MAR]) //Lee memoria en MDR
+2   OPER2 <-- MDR //Cargo el operando2 con la direccion de memoria a acceder
+4   OPER1 <-- ACC //Cargo el operando1 con el Acumulador
+20  C <-- 0 //Se pone el carry en 0 para hacer la suma
+5   ACC <-- OPER2 + OPER1 + C //Cargo el Acumulador con la suma del operando1 + el operando2 y el c
+
+

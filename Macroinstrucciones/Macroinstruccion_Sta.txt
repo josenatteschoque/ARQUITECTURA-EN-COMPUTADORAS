@@ -1,0 +1,8 @@
+STA Almacenar el Acumulador | Mp[AP] ← Acc
+
+    "microinstrucciones"
+
+8   MAR <-- AP  //Cargo el argumento al registro MDR
+12  READ(MDR <-- MP[MDR])   //Lee memoria en MDR
+6   MDR <-- ACC//Al registro MDR le cargo lo que tenga el Acumulador
+13  WRITE(MP[MAR] <-- MDR)  //Escribe lo que contiene MDR en MAR
