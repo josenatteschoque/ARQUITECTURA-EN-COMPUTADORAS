@@ -1,0 +1,11 @@
+SUB Restar al Acumulador  | Acc← Acc - Mp[AP] (*)
+
+    "microinstrucciones"
+
+8   MAR <-- AP  //Cargo el argumento al registro MDR
+12  READ (MDR <-- MP[MDR])  //
+2   OPER2 <-- MDR   //Cargo el operando2 con la direccion de memoria a acceder
+4   OPER1 <-- ACC   //Cargo el operando1 al Acumulador
+20  C <-- 0 //cargo 0 al carry
+3   OPER2 <-- NOT(MDR)  //hago el complemento del operando2
+5   ACC <-- OPER2 + OPER1 + C   //Realizo la operacion

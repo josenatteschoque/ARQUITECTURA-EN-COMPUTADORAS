@@ -1,0 +1,10 @@
+JPZ Salta si Acc=0 | Si Acc=0 PC← AP
+
+    "microinstrucciones"
+
+8   MAR <-- AP
+12  READ(MDR <-- MP[MAR])
+17  IF ACC = 0 GO TO LABEL
+3   OPER2 <-- NOT(MDR)
+
+9   LABEL:PC <-- AP

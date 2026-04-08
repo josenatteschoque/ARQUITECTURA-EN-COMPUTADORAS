@@ -1,0 +1,10 @@
+CLDA Cargar el Acc complementado | Acc ← NOT (Mp[AP])
+
+    "microinstrucciones"
+
+8   MAR <-- AP
+12  READ (MDR <-- MP[MAR]) 
+3   OPER2 <-- NOT(MDR)
+15  OPER1 <-- 0
+20  C <-- 0
+5   ACC <-- OPER2 + OPER1 + C

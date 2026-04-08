@@ -1,0 +1,31 @@
+#Programa hola mundo en Risc-V
+	.data	#Inicia el bloque de codigo
+str:	.asciz "Hola mundo en Risc-V!"
+
+	.text	#Bloque donde se realizan las instrucciones
+	
+main:	#Etiqueta Principal
+
+	la a0, str	#Carga la direccion de la variable
+	li a7, 4	#Carga el argumento del string
+	ecall
+	
+	#Finaliza el programa
+	li a7, 10
+	ecall
+	
+#Analisis
+#¿Que instruccion imprime el mensaje?
+#Cuando llega ala instruccion li a7,10 se imprime el mensaje
+
+#¿Que instruccion finaliza el programa?
+#La instruccion ecall finaliza el programa
+
+#¿Cuantas instrucciones se ejecutan hasta que el programa terminara?
+#Solo se ejecutan 5 instrucciones las mismas que estan en el bloque de .text
+
+#¿cual es la direccion de memoria donde esta la situada de la primera instruccion?
+#La direccion es nose... :(
+
+
+

@@ -3,5 +3,5 @@ LDA Cargar el Acumulador | Acc ← Mp[AP]
     "microinstrucciones"
 
 8   MAR <-- AP  //Cargo el argumento al registro MDR
-12  RAED <-- (MDR <-- MP[MAR])  //Lee memoria en MDR
+12  RAED (MDR <-- MP[MAR])  //Lee memoria en MDR
 1   ACC <-- MDR     //Cargo al Acumulador lo que contenga en registro MDR

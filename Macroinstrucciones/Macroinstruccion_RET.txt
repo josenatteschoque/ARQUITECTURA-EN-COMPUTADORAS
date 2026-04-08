@@ -1,0 +1,7 @@
+RET Retorno de subrutina | PC ← Stack
+
+    "microinstrucciones"
+
+8   MAR <-- AP
+12  READ(MDR <-- MP[MAR])
+9   PC <-- AP
