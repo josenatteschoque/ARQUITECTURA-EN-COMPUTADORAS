@@ -1,4 +1,6 @@
 #Programa hola mundo en Risc-V
+
+
 	.data	#Inicia el bloque de codigo
 str:	.asciz "Hola mundo en Risc-V!"
 
@@ -26,6 +28,3 @@ main:	#Etiqueta Principal
 
 #¿cual es la direccion de memoria donde esta la situada de la primera instruccion?
 #La direccion es nose... :(
-
-
-
