@@ -18,6 +18,7 @@ main:
 	lw s0, 0(t1)	#s0 <-- CF
 	lw s1, 0(t2)	#s1 <-- CC
 	li t5, 0	#i <-- 0
+	li s10, 2	#Constante para dividir 2
 	
 forF:
 	beq t5, s0, finforF
@@ -33,14 +34,27 @@ forC:
 	
 	lw s3, 0(s2)	#s3 <-- M[i, j] 
 
+	#chequeamos paridad
+	
+	rem s4, s3, s10	#s4 <-- s3 % 2
+	beqz s4, finIter
+	add s9, s9, s3
+	
+
+finIter:	
+	addi t6, t6, 1	#++j  
 	j forC
 	
 	
 finforC:
+	addi t5, t5, 1	#++i
 	j forF
 	
 finforF:
+	sw s9, 0(t3)	#res <-- s9
 
-	
+	#finalizamos el programa
+	li a7, 10
+	ecall
 	
 ## k <-- i * CC + j
