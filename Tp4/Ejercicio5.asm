@@ -1,11 +1,13 @@
 #A partir del ejercicio anterior, implementar un algoritmo que ordene el arreglo de menor
 #a mayor. El arreglo ordenado debe almacenarse en uno nuevo llamado RES.
 
+#Implementar
 .data
 mensaje:	.asciz "El numero menor es: "
 Array:	.word 22,63,72,13,1
 sizeArray:	.word 5
 Minimo:	.space 4
+RES:	.word 50
 
 .text
 main:
