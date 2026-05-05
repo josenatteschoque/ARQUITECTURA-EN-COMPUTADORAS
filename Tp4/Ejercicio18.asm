@@ -19,7 +19,6 @@ main:
 	#Solicito el ingreso de datos
 	li a7, 5
 	ecall
-	mv a0, a0
 	
 	jal ra, suma_n	#Llama ala subrutina 
 	mv t4, a0	#Guardo el resultado temporalmente
